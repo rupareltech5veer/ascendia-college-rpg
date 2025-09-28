@@ -59,9 +59,6 @@ const CharacterSelection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {selectedCharacter === character.id && (
-                <div className="absolute inset-0 rounded-full bg-primary/10 shadow-[0_0_30px_hsl(var(--primary)/0.8)] animate-pulse" />
-              )}
             </div>
           ))}
         </div>
