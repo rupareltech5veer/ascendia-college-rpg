@@ -12,7 +12,7 @@ import {
   Shield,
   Trophy
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const sidebarItems = [
   { name: "Leaderboard", href: "/leaderboard", icon: Trophy, description: "Champions Hall" },
@@ -27,6 +27,11 @@ const sidebarItems = [
 const Sidebar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close sidebar when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
