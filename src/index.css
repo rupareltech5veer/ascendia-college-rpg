@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Ascendia Design System - Medieval Fantasy Theme with Glass Morphism
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Mystical Purple Background Gradient */
+    --background: 270 50% 15%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass Morphism Cards */
+    --card: 270 20% 25%;
+    --card-foreground: 0 0% 95%;
+    --glass: 270 15% 30%;
+    --glass-border: 270 30% 45%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Overlays and Popovers */
+    --popover: 270 25% 20%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Purple Brand Colors */
+    --primary: 270 80% 55%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 270 70% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary Mystical Colors */
+    --secondary: 270 25% 25%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Elements */
+    --muted: 270 15% 20%;
+    --muted-foreground: 270 5% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Colors */
+    --accent: 280 60% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 120 60% 50%;
+    --warning: 45 100% 60%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Form Elements */
+    --border: 270 25% 35%;
+    --input: 270 15% 25%;
+    --ring: 270 80% 55%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 80% 55%), hsl(280 70% 45%));
+    --gradient-background: linear-gradient(180deg, hsl(270 50% 15%) 0%, hsl(260 40% 10%) 100%);
+    --gradient-glass: linear-gradient(135deg, 
+      hsla(270, 30%, 40%, 0.2) 0%, 
+      hsla(280, 25%, 35%, 0.1) 100%);
+
+    /* Shadows and Effects */
+    --shadow-glow: 0 0 40px hsla(270, 80%, 55%, 0.3);
+    --shadow-card: 0 8px 32px hsla(270, 50%, 10%, 0.4);
+    --backdrop-blur: blur(20px);
+
+    /* Border Radius */
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +128,46 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  /* Glass Morphism Utilities */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid hsl(var(--glass-border) / 0.2);
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-strong {
+    background: hsla(270, 25%, 30%, 0.4);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid hsl(var(--glass-border) / 0.3);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Glow Effects */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
   }
 }
