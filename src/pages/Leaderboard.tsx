@@ -3,31 +3,49 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Sidebar from "@/components/Sidebar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+// Import avatar images
+import aureliusAvatar from "@/assets/aurelius-avatar.png";
+import avatar1 from "@/assets/avatar1.png";
+import avatar2 from "@/assets/avatar2.png";
+import avatar3 from "@/assets/avatar3.png";
+import avatar4 from "@/assets/avatar4.png";
+import avatar5 from "@/assets/avatar5.png";
+import avatar6 from "@/assets/avatar6.png";
+import avatar7 from "@/assets/avatar7.png";
+import avatar8 from "@/assets/avatar8.png";
+
+const avatarImages = [aureliusAvatar, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 
 const leaderboardData = [
   {
     rank: 1,
-    username: "KING",
+    username: "ALFREDO",
     xp: "1,000,000",
-    achievements: "EARLY BIRD, TOP 3"
+    achievements: "EARLY BIRD, TOP 3",
+    avatar: aureliusAvatar
   },
   {
     rank: 2,
     username: "QUEEN",
     xp: "900,808",
-    achievements: "TOP 3 FOR 2 WEEKS"
+    achievements: "TOP 3 FOR 2 WEEKS",
+    avatar: avatar3
   },
   {
     rank: 3,
     username: "PAWN",
     xp: "765,321",
-    achievements: "FAST RISER"
+    achievements: "FAST RISER",
+    avatar: avatar7
   },
   {
     rank: 4,
     username: "ROOK",
     xp: "709,456",
-    achievements: "EARLY BIRD, ON A ROLL"
+    achievements: "EARLY BIRD, ON A ROLL",
+    avatar: avatar2
   }
 ];
 
@@ -91,9 +109,10 @@ const Leaderboard = () => {
                 <div className="grid grid-cols-5 gap-6 items-center">
                   {/* Avatar */}
                   <div className="flex items-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-                      <div className="w-12 h-12 rounded-full bg-white/20"></div>
-                    </div>
+                    <Avatar className="w-16 h-16">
+                      <AvatarImage src={entry.avatar} alt={entry.username} />
+                      <AvatarFallback>{entry.username.slice(0, 2)}</AvatarFallback>
+                    </Avatar>
                   </div>
 
                   {/* Username */}
