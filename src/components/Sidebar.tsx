@@ -100,19 +100,6 @@ const Sidebar = () => {
             );
           })}
         </div>
-
-        {/* Bottom Mystical Decoration */}
-        <div className="absolute bottom-6 left-6 right-6">
-          <div className="glass rounded-lg p-4 border border-glass-border/30">
-            <div className="flex items-center gap-2 text-center">
-              <Sparkles className="h-4 w-4 text-primary animate-pulse" />
-              <span className="text-xs text-muted-foreground italic flex-1">
-                "Knowledge is the sharpest sword"
-              </span>
-              <Sparkles className="h-4 w-4 text-primary animate-pulse" />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Mystical Overlay for mobile */}
