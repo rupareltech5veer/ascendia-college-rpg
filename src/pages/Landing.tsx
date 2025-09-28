@@ -4,7 +4,7 @@ import ascendiaLogo from "@/assets/ascendia-logo.png";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-gradient-background relative overflow-hidden">
+    <div className="min-h-screen bg-ascendia relative overflow-hidden">
       {/* Navigation */}
       <nav className="w-full p-6 z-20 relative">
         <div className="max-w-7xl mx-auto flex items-center justify-between">

@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-background flex items-center justify-center p-6">
+    <div className="min-h-screen bg-ascendia flex items-center justify-center p-6">
       <div className="w-full max-w-6xl flex items-center justify-center gap-16">
         
         {/* Logo Section */}

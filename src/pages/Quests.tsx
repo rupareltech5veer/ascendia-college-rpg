@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Quests = () => {
   return (
-    <div className="min-h-screen bg-gradient-background">
+    <div className="min-h-screen bg-ascendia">
       <Sidebar />
       
       <div className="md:ml-64 p-6">

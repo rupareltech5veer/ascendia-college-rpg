@@ -69,6 +69,8 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-background': 'var(--gradient-background)',
         'gradient-glass': 'var(--gradient-glass)',
+        'gradient-overlay': 'var(--gradient-overlay)',
+        'ascendia': "url('@/assets/background.png'), var(--gradient-overlay)",
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
