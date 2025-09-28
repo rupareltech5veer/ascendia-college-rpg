@@ -87,7 +87,9 @@ const Sidebar = () => {
                   }`}>
                     {item.name}
                   </div>
-                  <div className="text-xs text-muted-foreground opacity-75">
+                  <div className={`text-xs transition-colors duration-300 ${
+                    isActive ? "text-muted-foreground/90" : "text-muted-foreground opacity-75"
+                  }`}>
                     {item.description}
                   </div>
                 </div>
