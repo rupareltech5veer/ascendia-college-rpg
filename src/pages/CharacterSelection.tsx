@@ -45,11 +45,7 @@ const CharacterSelection = () => {
           {characters.map((character) => (
             <div
               key={character.id}
-              className={`relative cursor-pointer transition-all duration-300 ${
-                selectedCharacter === character.id
-                  ? "shadow-[0_0_30px_hsl(var(--primary)/0.8)]"
-                  : "hover:scale-105"
-              }`}
+              className="relative cursor-pointer transition-all duration-300 hover:scale-105"
               onClick={() => setSelectedCharacter(character.id)}
             >
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/20 hover:border-primary/40 transition-all duration-300">
