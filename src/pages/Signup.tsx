@@ -20,8 +20,8 @@ const Signup = () => {
       alert("Passwords don't match!");
       return;
     }
-    // Navigate to character selection
-    navigate("/character-selection");
+    // Complete signup and navigate to dashboard
+    navigate("/dashboard");
   };
 
   return (

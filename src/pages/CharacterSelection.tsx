@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import knightAvatar from "@/assets/character-knight.png";
-import mageAvatar from "@/assets/character-mage.png";
-import archerAvatar from "@/assets/character-archer.png";
-import warriorAvatar from "@/assets/character-warrior.png";
+import avatar1 from "@/assets/avatar1.png";
+import avatar2 from "@/assets/avatar2.png";
+import avatar3 from "@/assets/avatar3.png";
+import avatar4 from "@/assets/avatar4.png";
+import avatar5 from "@/assets/avatar5.png";
+import avatar6 from "@/assets/avatar6.png";
 
 const characters = [
-  { id: 1, name: "Knight", image: knightAvatar },
-  { id: 2, name: "Mage", image: mageAvatar },
-  { id: 3, name: "Archer", image: archerAvatar },
-  { id: 4, name: "Warrior", image: warriorAvatar },
-  { id: 5, name: "Paladin", image: knightAvatar },
-  { id: 6, name: "Wizard", image: mageAvatar },
-  { id: 7, name: "Ranger", image: archerAvatar },
-  { id: 8, name: "Berserker", image: warriorAvatar },
+  { id: 1, name: "Queen", image: avatar1 },
+  { id: 2, name: "King", image: avatar2 },
+  { id: 3, name: "Knight", image: avatar3 },
+  { id: 4, name: "Paladin", image: avatar4 },
+  { id: 5, name: "Gladiator", image: avatar5 },
+  { id: 6, name: "Warrior", image: avatar6 },
 ];
 
 const CharacterSelection = () => {
@@ -23,9 +23,9 @@ const CharacterSelection = () => {
 
   const handleComplete = () => {
     if (selectedCharacter) {
-      // Store selected character and navigate to dashboard
+      // Store selected character and navigate to signup form
       localStorage.setItem("selectedCharacter", selectedCharacter.toString());
-      navigate("/dashboard");
+      navigate("/signup");
     }
   };
 
@@ -39,7 +39,7 @@ const CharacterSelection = () => {
         </h1>
 
         {/* Character Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16 max-w-4xl">
           {characters.map((character) => (
             <div
               key={character.id}
@@ -50,7 +50,7 @@ const CharacterSelection = () => {
               }`}
               onClick={() => setSelectedCharacter(character.id)}
             >
-              <div className="glass rounded-full p-2 border border-glass-border/30 aspect-square">
+              <div className="glass rounded-full p-2 border border-glass-border/30 aspect-square w-32 h-32 md:w-40 md:h-40">
                 <img
                   src={character.image}
                   alt={character.name}

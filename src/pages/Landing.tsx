@@ -53,7 +53,7 @@ const Landing = () => {
               LOGIN
             </Button>
           </Link>
-          <Link to="/signup">
+          <Link to="/character-selection">
             <Button variant="hero" size="lg" className="min-w-[200px]">
               SIGNUP
             </Button>
