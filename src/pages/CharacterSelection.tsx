@@ -47,7 +47,7 @@ const CharacterSelection = () => {
               key={character.id}
               className={`relative cursor-pointer transition-all duration-300 ${
                 selectedCharacter === character.id
-                  ? "scale-110 ring-4 ring-primary/80"
+                  ? "shadow-[0_0_30px_hsl(var(--primary)/0.8)]"
                   : "hover:scale-105"
               }`}
               onClick={() => setSelectedCharacter(character.id)}
