@@ -60,7 +60,7 @@ const CharacterSelection = () => {
                 />
               </div>
               {selectedCharacter === character.id && (
-                <div className="absolute inset-0 rounded-full bg-primary/20 border-4 border-primary animate-pulse" />
+                <div className="absolute inset-0 rounded-full bg-primary/10 shadow-[0_0_30px_hsl(var(--primary)/0.8)] animate-pulse" />
               )}
             </div>
           ))}
