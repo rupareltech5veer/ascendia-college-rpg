@@ -32,15 +32,15 @@ const Login = () => {
         </div>
 
         {/* Login Form */}
-        <div className="w-full max-w-md">
-          <div className="glass-strong rounded-2xl p-8 border border-glass-border/30">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold text-foreground mb-2">ascendia</h1>
+        <div className="w-full max-w-lg">
+          <div className="glass-strong rounded-2xl p-12 border border-glass-border/30">
+            <div className="text-center mb-10">
+              <h1 className="text-6xl font-bold text-foreground mb-2">ascendia</h1>
             </div>
 
-            <form onSubmit={handleLogin} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="username" className="text-foreground text-sm font-medium">
+            <form onSubmit={handleLogin} className="space-y-8">
+              <div className="space-y-3">
+                <Label htmlFor="username" className="text-foreground text-lg font-medium">
                   USERNAME
                 </Label>
                 <Input
@@ -48,13 +48,13 @@ const Login = () => {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="password" className="text-foreground text-sm font-medium">
+              <div className="space-y-3">
+                <Label htmlFor="password" className="text-foreground text-lg font-medium">
                   PASSWORD
                 </Label>
                 <Input
@@ -62,19 +62,19 @@ const Login = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <Checkbox
                   id="remember"
                   checked={rememberMe}
                   onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                  className="border-glass-border/40"
+                  className="border-glass-border/40 w-5 h-5"
                 />
-                <Label htmlFor="remember" className="text-foreground text-sm">
+                <Label htmlFor="remember" className="text-foreground text-lg">
                   REMEMBER MY USERNAME
                 </Label>
               </div>
@@ -89,10 +89,10 @@ const Login = () => {
               </Button>
             </form>
 
-            <div className="mt-6 text-center">
-              <p className="text-muted-foreground">
+            <div className="mt-8 text-center">
+              <p className="text-muted-foreground text-lg">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-primary hover:underline">
+                <Link to="/signup" className="text-primary hover:underline text-lg">
                   Sign up
                 </Link>
               </p>

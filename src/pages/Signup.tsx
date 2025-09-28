@@ -38,15 +38,15 @@ const Signup = () => {
         </div>
 
         {/* Signup Form */}
-        <div className="w-full max-w-md">
-          <div className="glass-strong rounded-2xl p-8 border border-glass-border/30">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold text-foreground mb-2">ascendia</h1>
+        <div className="w-full max-w-lg">
+          <div className="glass-strong rounded-2xl p-12 border border-glass-border/30">
+            <div className="text-center mb-10">
+              <h1 className="text-6xl font-bold text-foreground mb-2">ascendia</h1>
             </div>
 
-            <form onSubmit={handleSignup} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground text-sm font-medium">
+            <form onSubmit={handleSignup} className="space-y-8">
+              <div className="space-y-3">
+                <Label htmlFor="email" className="text-foreground text-lg font-medium">
                   EMAIL
                 </Label>
                 <Input
@@ -54,13 +54,13 @@ const Signup = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="username" className="text-foreground text-sm font-medium">
+              <div className="space-y-3">
+                <Label htmlFor="username" className="text-foreground text-lg font-medium">
                   USERNAME
                 </Label>
                 <Input
@@ -68,13 +68,13 @@ const Signup = () => {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="password" className="text-foreground text-sm font-medium">
+              <div className="space-y-3">
+                <Label htmlFor="password" className="text-foreground text-lg font-medium">
                   PASSWORD
                 </Label>
                 <Input
@@ -82,13 +82,13 @@ const Signup = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="confirmPassword" className="text-foreground text-sm font-medium">
+              <div className="space-y-3">
+                <Label htmlFor="confirmPassword" className="text-foreground text-lg font-medium">
                   CONFIRM PASSWORD
                 </Label>
                 <Input
@@ -96,19 +96,19 @@ const Signup = () => {
                   type="password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-12"
+                  className="glass border-glass-border/40 text-foreground placeholder:text-muted-foreground rounded-xl h-16 text-lg px-6"
                   required
                 />
               </div>
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <Checkbox
                   id="remember"
                   checked={rememberMe}
                   onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                  className="border-glass-border/40"
+                  className="border-glass-border/40 w-5 h-5"
                 />
-                <Label htmlFor="remember" className="text-foreground text-sm">
+                <Label htmlFor="remember" className="text-foreground text-lg">
                   REMEMBER MY USERNAME
                 </Label>
               </div>
@@ -123,10 +123,10 @@ const Signup = () => {
               </Button>
             </form>
 
-            <div className="mt-6 text-center">
-              <p className="text-muted-foreground">
+            <div className="mt-8 text-center">
+              <p className="text-muted-foreground text-lg">
                 Already have an account?{" "}
-                <Link to="/login" className="text-primary hover:underline">
+                <Link to="/login" className="text-primary hover:underline text-lg">
                   Log in
                 </Link>
               </p>
