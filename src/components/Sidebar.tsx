@@ -35,15 +35,17 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Menu Toggle Button - Crown Icon */}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="fixed top-4 left-4 z-50 glass-strong border border-glass-border/50 text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X className="h-5 w-5" /> : <Crown className="h-5 w-5 text-primary" />}
-      </Button>
+      {/* Crown Button - Only show when sidebar is hidden */}
+      {!isOpen && (
+        <Button
+          variant="ghost"
+          size="icon"
+          className="fixed top-4 left-4 z-50 glass-strong border border-glass-border/50 text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
+          onClick={() => setIsOpen(true)}
+        >
+          <Crown className="h-5 w-5 text-primary" />
+        </Button>
+      )}
 
       {/* Medieval Sidebar */}
       <div className={`fixed left-0 top-0 h-full w-80 glass-strong border-r border-glass-border/30 transition-all duration-500 z-40 ${
