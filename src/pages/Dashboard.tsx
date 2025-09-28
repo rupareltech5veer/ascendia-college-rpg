@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import Sidebar from "@/components/Sidebar";
-import warriorAvatar from "@/assets/character-warrior.png";
+import avatar5 from "@/assets/avatar5.png";
 import aureliusAvatar from "@/assets/aurelius-avatar.png";
 
 const Dashboard = () => {
@@ -45,7 +45,7 @@ const Dashboard = () => {
               <div className="relative mb-6">
                 <div className="w-48 h-48 rounded-full border-4 border-primary/60 p-2 bg-gradient-primary">
                   <img
-                    src={warriorAvatar}
+                    src={avatar5}
                     alt="Character Avatar"
                     className="w-full h-full rounded-full object-cover"
                   />
