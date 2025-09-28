@@ -7,6 +7,8 @@ import avatar3 from "@/assets/avatar3.png";
 import avatar4 from "@/assets/avatar4.png";
 import avatar5 from "@/assets/avatar5.png";
 import avatar6 from "@/assets/avatar6.png";
+import avatar7 from "@/assets/avatar7.png";
+import avatar8 from "@/assets/avatar8.png";
 
 const characters = [
   { id: 1, name: "Queen", image: avatar1 },
@@ -15,6 +17,8 @@ const characters = [
   { id: 4, name: "Paladin", image: avatar4 },
   { id: 5, name: "Gladiator", image: avatar5 },
   { id: 6, name: "Warrior", image: avatar6 },
+  { id: 7, name: "Druid", image: avatar7 },
+  { id: 8, name: "Sage", image: avatar8 },
 ];
 
 const CharacterSelection = () => {
