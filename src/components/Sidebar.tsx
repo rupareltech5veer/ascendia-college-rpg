@@ -30,14 +30,14 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile Menu Button - Medieval Style */}
+      {/* Mobile Menu Button - Crown Icon */}
       <Button
         variant="ghost"
         size="icon"
         className="md:hidden fixed top-4 left-4 z-50 glass-strong border border-glass-border/50 text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        {isOpen ? <X className="h-5 w-5" /> : <Crown className="h-5 w-5 text-primary" />}
       </Button>
 
       {/* Medieval Sidebar */}
@@ -67,7 +67,7 @@ const Sidebar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`group relative flex items-center gap-4 p-4 rounded-xl transition-all duration-300 ${
                   isActive 
-                    ? "bg-primary/20 border border-primary/40 text-primary shadow-glow" 
+                    ? "bg-white border border-primary text-primary shadow-lg" 
                     : "hover:bg-glass-border/20 hover:border-glass-border/40 border border-transparent text-foreground"
                 }`}
               >
@@ -102,7 +102,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* Mystical Overlay for mobile */}
+      {/* Overlay for mobile - Close on outside click */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden transition-opacity duration-300"
