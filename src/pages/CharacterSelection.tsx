@@ -23,7 +23,6 @@ const CharacterSelection = () => {
 
   const handleComplete = () => {
     if (selectedCharacter) {
-      // Store selected character and navigate to signup form
       localStorage.setItem("selectedCharacter", selectedCharacter.toString());
       navigate("/signup");
     }
@@ -31,30 +30,29 @@ const CharacterSelection = () => {
 
   return (
     <div className="min-h-screen bg-ascendia flex flex-col items-center justify-center p-6">
-      <div className="w-full max-w-4xl text-center">
-        
+      <div className="w-full max-w-6xl text-center">
         {/* Title */}
-        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-16">
+        <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-20">
           pick a character
         </h1>
 
-        {/* Character Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16 max-w-4xl">
+        {/* Character Grid - 2 rows of 4 */}
+        <div className="grid grid-cols-4 gap-8 mb-20 max-w-5xl mx-auto">
           {characters.map((character) => (
             <div
               key={character.id}
               className={`relative cursor-pointer transition-all duration-300 ${
                 selectedCharacter === character.id
-                  ? "scale-110 ring-4 ring-primary ring-opacity-80"
+                  ? "scale-110 ring-4 ring-primary/80"
                   : "hover:scale-105"
               }`}
               onClick={() => setSelectedCharacter(character.id)}
             >
-              <div className="glass rounded-full p-2 border border-glass-border/30 aspect-square w-32 h-32 md:w-40 md:h-40">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/20 hover:border-primary/40 transition-all duration-300">
                 <img
                   src={character.image}
                   alt={character.name}
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               {selectedCharacter === character.id && (
@@ -66,11 +64,9 @@ const CharacterSelection = () => {
 
         {/* Complete Button */}
         <Button
-          variant="hero"
-          size="lg"
           onClick={handleComplete}
           disabled={!selectedCharacter}
-          className="min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-white text-black hover:bg-gray-200 text-xl font-bold px-16 py-4 rounded-full min-w-[300px] h-16 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
         >
           COMPLETE
         </Button>
