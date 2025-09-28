@@ -48,7 +48,11 @@ const CharacterSelection = () => {
               className="relative cursor-pointer transition-all duration-300 hover:scale-105"
               onClick={() => setSelectedCharacter(character.id)}
             >
-              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/20 hover:border-primary/40 transition-all duration-300">
+              <div className={`w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden transition-all duration-300 ${
+                selectedCharacter === character.id
+                  ? "border-6 border-primary"
+                  : "border-4 border-white/20 hover:border-primary/40"
+              }`}>
                 <img
                   src={character.image}
                   alt={character.name}
