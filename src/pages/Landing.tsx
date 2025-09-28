@@ -10,28 +10,6 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold text-foreground">ascendia</div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-1">
-              <span className="text-foreground">DOWNLOAD</span>
-              <span className="text-foreground">▼</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-foreground">SUPPORT</span>
-              <span className="text-foreground">▼</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-foreground">ABOUT</span>
-              <span className="text-foreground">▼</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-foreground">REVIEWS</span>
-              <span className="text-foreground">▼</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-foreground">LEADERBOARD</span>
-              <span className="text-foreground">▼</span>
-            </div>
-          </div>
         </div>
       </nav>
 
